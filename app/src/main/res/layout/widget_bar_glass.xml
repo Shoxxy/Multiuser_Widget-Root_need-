@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@drawable/bg_glass_sexy"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <!-- User 1 -->
+    <LinearLayout android:id="@+id/user_1_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:id="@+id/user_1_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/hex_bloom_cyan" />
+            <ImageView android:id="@+id/user_1_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
+        </FrameLayout>
+        <TextView android:id="@+id/user_1_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#E0E0E0" android:textSize="8sp" android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+
+    <View android:layout_width="4dp" android:layout_height="match_parent" />
+
+    <!-- User 2 -->
+    <LinearLayout android:id="@+id/user_2_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:id="@+id/user_2_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/hex_bloom_cyan" />
+            <ImageView android:id="@+id/user_2_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
+        </FrameLayout>
+        <TextView android:id="@+id/user_2_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#E0E0E0" android:textSize="8sp" android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+
+    <View android:layout_width="4dp" android:layout_height="match_parent" />
+
+    <!-- User 3 -->
+    <LinearLayout android:id="@+id/user_3_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:id="@+id/user_3_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/hex_bloom_cyan" />
+            <ImageView android:id="@+id/user_3_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
+        </FrameLayout>
+        <TextView android:id="@+id/user_3_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#E0E0E0" android:textSize="8sp" android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+
+    <View android:layout_width="4dp" android:layout_height="match_parent" />
+
+    <!-- User 4 -->
+    <LinearLayout android:id="@+id/user_4_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:id="@+id/user_4_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/hex_bloom_cyan" />
+            <ImageView android:id="@+id/user_4_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
+        </FrameLayout>
+        <TextView android:id="@+id/user_4_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#E0E0E0" android:textSize="8sp" android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+
+    <View android:layout_width="4dp" android:layout_height="match_parent" />
+
+    <!-- User 5 -->
+    <LinearLayout android:id="@+id/user_5_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:id="@+id/user_5_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/hex_bloom_cyan" />
+            <ImageView android:id="@+id/user_5_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
+        </FrameLayout>
+        <TextView android:id="@+id/user_5_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#E0E0E0" android:textSize="8sp" android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+
+    <View android:layout_width="4dp" android:layout_height="match_parent" />
+
+    <!-- User 6 -->
+    <LinearLayout android:id="@+id/user_6_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:id="@+id/user_6_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/hex_bloom_cyan" />
+            <ImageView android:id="@+id/user_6_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
+        </FrameLayout>
+        <TextView android:id="@+id/user_6_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#E0E0E0" android:textSize="8sp" android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+
+</LinearLayout>

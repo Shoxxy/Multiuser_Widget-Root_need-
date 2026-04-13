@@ -49,6 +49,33 @@
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_5x2" />
         </receiver>
 
+        <!-- 5x1 SPECIAL DESIGNS -->
+
+        <receiver android:name=".ProviderHub5x1_Cyber" android:label="Hub Bar (5x1 Cyber)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_5x1_cyber" />
+        </receiver>
+
+        <receiver android:name=".ProviderHub5x1_Gold" android:label="Hub Bar (5x1 Gold)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_5x1_gold" />
+        </receiver>
+
+        <receiver android:name=".ProviderHub5x1_Bloom" android:label="Hub Bar (5x1 Bloom)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_5x1_bloom" />
+        </receiver>
+
+        <receiver android:name=".ProviderHub5x1_Eco" android:label="Hub Bar (5x1 Eco)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_5x1_eco" />
+        </receiver>
+
+        <receiver android:name=".ProviderHub5x1_Stealth" android:label="Hub Bar (5x1 Stealth)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_5x1_stealth" />
+        </receiver>
+
         <service android:name=".UserListService" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false" />
 
     </application>
