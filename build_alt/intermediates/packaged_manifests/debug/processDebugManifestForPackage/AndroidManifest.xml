@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.multiuserwidget"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="35" />
+
+    <permission
+        android:name="com.example.multiuserwidget.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.multiuserwidget.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MultiuserWidget" >
+        <activity
+            android:name="com.example.multiuserwidget.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.multiuserwidget.WidgetConfigActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- 1. Hub 4x1 -->
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub4x1"
+            android:exported="false"
+            android:label="Hub Bar (4x1)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_4x1" />
+        </receiver>
+
+        <!-- 2. Hub 5x1 -->
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub5x1"
+            android:exported="false"
+            android:label="Hub Bar (5x1)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_5x1" />
+        </receiver>
+
+        <!-- 3. Hub 4x2 -->
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub4x2"
+            android:exported="false"
+            android:label="Hub Grid (4x2)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_4x2" />
+        </receiver>
+
+        <!-- 4. Hub 5x2 -->
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub5x2"
+            android:exported="false"
+            android:label="Hub Grid (5x2)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_5x2" />
+        </receiver>
+
+        <!-- 5x1 SPECIAL DESIGNS -->
+
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub5x1_Cyber"
+            android:exported="false"
+            android:label="Hub Bar (5x1 Cyber)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_5x1_cyber" />
+        </receiver>
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub5x1_Gold"
+            android:exported="false"
+            android:label="Hub Bar (5x1 Gold)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_5x1_gold" />
+        </receiver>
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub5x1_Bloom"
+            android:exported="false"
+            android:label="Hub Bar (5x1 Bloom)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_5x1_bloom" />
+        </receiver>
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub5x1_Eco"
+            android:exported="false"
+            android:label="Hub Bar (5x1 Eco)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_5x1_eco" />
+        </receiver>
+        <receiver
+            android:name="com.example.multiuserwidget.ProviderHub5x1_Stealth"
+            android:exported="false"
+            android:label="Hub Bar (5x1 Stealth)" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/info_5x1_stealth" />
+        </receiver>
+
+        <service
+            android:name="com.example.multiuserwidget.UserListService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.multiuserwidget.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

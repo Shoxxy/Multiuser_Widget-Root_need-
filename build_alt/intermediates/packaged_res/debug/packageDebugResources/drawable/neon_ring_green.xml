@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Super Soft Outer Bloom (Layer 1) -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="12dp" android:color="#0500FF00" />
+            <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp" />
+        </shape>
+    </item>
+    <!-- Soft Outer Bloom (Layer 2) -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="10dp" android:color="#0D00FF00" />
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+        </shape>
+    </item>
+    <!-- Mid Bloom (Layer 3) -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="8dp" android:color="#1A00FF00" />
+            <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+        </shape>
+    </item>
+    <!-- Inner Bloom (Layer 4) -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="6dp" android:color="#3300FF00" />
+            <padding android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp" />
+        </shape>
+    </item>
+    <!-- Core Glow (Layer 5) -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="4dp" android:color="#6600FF00" />
+        </shape>
+    </item>
+    <!-- Sharp Core (Layer 6) -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="1.8dp" android:color="#FF00FF00" />
+        </shape>
+    </item>
+</layer-list>

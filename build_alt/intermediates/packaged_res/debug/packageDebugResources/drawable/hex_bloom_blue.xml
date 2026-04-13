@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:alpha="0.1">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="100dp" android:height="100dp" android:viewportWidth="100" android:viewportHeight="100">
+            <path android:fillColor="#2979FF" android:pathData="M50,2 L95,25 L95,75 L50,98 L5,75 L5,25 Z" />
+        </vector>
+    </item>
+    <item android:alpha="0.2" android:top="2dp" android:bottom="2dp" android:left="2dp" android:right="2dp">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="100dp" android:height="100dp" android:viewportWidth="100" android:viewportHeight="100">
+            <path android:fillColor="#2979FF" android:pathData="M50,5 L90,25 L90,75 L50,95 L10,75 L10,25 Z" />
+        </vector>
+    </item>
+    <item android:alpha="0.4" android:top="4dp" android:bottom="4dp" android:left="4dp" android:right="4dp">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="100dp" android:height="100dp" android:viewportWidth="100" android:viewportHeight="100">
+            <path android:fillColor="#2979FF" android:pathData="M50,5 L90,25 L90,75 L50,95 L10,75 L10,25 Z" />
+        </vector>
+    </item>
+    <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="100dp" android:height="100dp" android:viewportWidth="100" android:viewportHeight="100">
+            <path android:fillColor="#2979FF" android:pathData="M50,5 L90,25 L90,75 L50,95 L10,75 L10,25 Z" />
+             <path android:strokeColor="#FFFFFF" android:strokeWidth="1.5" android:pathData="M50,5 L90,25 L90,75 L50,95 L10,75 L10,25 Z" />
+        </vector>
+    </item>
+</layer-list>

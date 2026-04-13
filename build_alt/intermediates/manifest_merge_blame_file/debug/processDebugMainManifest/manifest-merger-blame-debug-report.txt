@@ -1,0 +1,381 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.multiuserwidget"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <permission
+11-->[androidx.core:core:1.13.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\2f73dbab5d8a6f39f65e244022dd644e\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+12        android:name="com.example.multiuserwidget.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.13.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\2f73dbab5d8a6f39f65e244022dd644e\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.13.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\2f73dbab5d8a6f39f65e244022dd644e\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.example.multiuserwidget.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.13.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\2f73dbab5d8a6f39f65e244022dd644e\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.13.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\2f73dbab5d8a6f39f65e244022dd644e\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:4:5-81:19
+18        android:allowBackup="true"
+18-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:5:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.13.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\2f73dbab5d8a6f39f65e244022dd644e\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+20        android:debuggable="true"
+21        android:extractNativeLibs="false"
+22        android:icon="@drawable/app_icon"
+22-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:6:9-42
+23        android:label="@string/app_name"
+23-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:7:9-41
+24        android:supportsRtl="true"
+24-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:8:9-35
+25        android:theme="@style/Theme.MultiuserWidget" >
+25-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:9:9-53
+26        <activity
+26-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:11:9-18:20
+27            android:name="com.example.multiuserwidget.MainActivity"
+27-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:12:13-41
+28            android:exported="true" >
+28-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:13:13-36
+29            <intent-filter>
+29-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:14:13-17:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:15:17-69
+30-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:15:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:16:17-77
+32-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:16:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:20:9-26:20
+36            android:name="com.example.multiuserwidget.WidgetConfigActivity"
+36-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:21:13-49
+37            android:exported="true" >
+37-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:22:13-36
+38            <intent-filter>
+38-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:23:13-25:29
+39                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+39-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:24:17-87
+39-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:24:25-84
+40            </intent-filter>
+41        </activity>
+42
+43        <!-- 1. Hub 4x1 -->
+44        <receiver
+44-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:29:9-32:20
+45            android:name="com.example.multiuserwidget.ProviderHub4x1"
+45-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:29:19-49
+46            android:exported="false"
+46-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:29:80-104
+47            android:label="Hub Bar (4x1)" >
+47-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:29:50-79
+48            <intent-filter>
+48-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+49                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+49-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+49-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+50                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+50-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+50-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+51            </intent-filter>
+52
+53            <meta-data
+53-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+54                android:name="android.appwidget.provider"
+54-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+55                android:resource="@xml/info_4x1" />
+55-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+56        </receiver>
+57
+58        <!-- 2. Hub 5x1 -->
+59        <receiver
+59-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:35:9-38:20
+60            android:name="com.example.multiuserwidget.ProviderHub5x1"
+60-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:35:19-49
+61            android:exported="false"
+61-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:35:80-104
+62            android:label="Hub Bar (5x1)" >
+62-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:35:50-79
+63            <intent-filter>
+63-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+64                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+64-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+64-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+65                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+65-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+65-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+66            </intent-filter>
+67
+68            <meta-data
+68-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+69                android:name="android.appwidget.provider"
+69-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+70                android:resource="@xml/info_5x1" />
+70-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+71        </receiver>
+72
+73        <!-- 3. Hub 4x2 -->
+74        <receiver
+74-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:41:9-44:20
+75            android:name="com.example.multiuserwidget.ProviderHub4x2"
+75-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:41:19-49
+76            android:exported="false"
+76-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:41:81-105
+77            android:label="Hub Grid (4x2)" >
+77-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:41:50-80
+78            <intent-filter>
+78-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+79                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+79-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+79-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+80                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+80-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+80-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+81            </intent-filter>
+82
+83            <meta-data
+83-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+84                android:name="android.appwidget.provider"
+84-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+85                android:resource="@xml/info_4x2" />
+85-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+86        </receiver>
+87
+88        <!-- 4. Hub 5x2 -->
+89        <receiver
+89-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:47:9-50:20
+90            android:name="com.example.multiuserwidget.ProviderHub5x2"
+90-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:47:19-49
+91            android:exported="false"
+91-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:47:81-105
+92            android:label="Hub Grid (5x2)" >
+92-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:47:50-80
+93            <intent-filter>
+93-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+94                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+94-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+94-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+95                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+95-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+95-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+96            </intent-filter>
+97
+98            <meta-data
+98-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+99                android:name="android.appwidget.provider"
+99-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+100                android:resource="@xml/info_5x2" />
+100-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+101        </receiver>
+102
+103        <!-- 5x1 SPECIAL DESIGNS -->
+104
+105        <receiver
+105-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:54:9-57:20
+106            android:name="com.example.multiuserwidget.ProviderHub5x1_Cyber"
+106-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:54:19-55
+107            android:exported="false"
+107-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:54:92-116
+108            android:label="Hub Bar (5x1 Cyber)" >
+108-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:54:56-91
+109            <intent-filter>
+109-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+110                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+110-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+110-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+111                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+111-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+111-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+112            </intent-filter>
+113
+114            <meta-data
+114-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+115                android:name="android.appwidget.provider"
+115-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+116                android:resource="@xml/info_5x1_cyber" />
+116-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+117        </receiver>
+118        <receiver
+118-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:59:9-62:20
+119            android:name="com.example.multiuserwidget.ProviderHub5x1_Gold"
+119-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:59:19-54
+120            android:exported="false"
+120-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:59:90-114
+121            android:label="Hub Bar (5x1 Gold)" >
+121-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:59:55-89
+122            <intent-filter>
+122-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+123                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+123-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+123-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+124                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+124-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+124-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+125            </intent-filter>
+126
+127            <meta-data
+127-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+128                android:name="android.appwidget.provider"
+128-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+129                android:resource="@xml/info_5x1_gold" />
+129-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+130        </receiver>
+131        <receiver
+131-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:64:9-67:20
+132            android:name="com.example.multiuserwidget.ProviderHub5x1_Bloom"
+132-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:64:19-55
+133            android:exported="false"
+133-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:64:92-116
+134            android:label="Hub Bar (5x1 Bloom)" >
+134-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:64:56-91
+135            <intent-filter>
+135-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+136                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+136-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+136-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+137                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+137-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+137-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+138            </intent-filter>
+139
+140            <meta-data
+140-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+141                android:name="android.appwidget.provider"
+141-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+142                android:resource="@xml/info_5x1_bloom" />
+142-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+143        </receiver>
+144        <receiver
+144-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:69:9-72:20
+145            android:name="com.example.multiuserwidget.ProviderHub5x1_Eco"
+145-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:69:19-53
+146            android:exported="false"
+146-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:69:88-112
+147            android:label="Hub Bar (5x1 Eco)" >
+147-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:69:54-87
+148            <intent-filter>
+148-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+149                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+149-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+149-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+150                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+150-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+150-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+151            </intent-filter>
+152
+153            <meta-data
+153-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+154                android:name="android.appwidget.provider"
+154-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+155                android:resource="@xml/info_5x1_eco" />
+155-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+156        </receiver>
+157        <receiver
+157-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:74:9-77:20
+158            android:name="com.example.multiuserwidget.ProviderHub5x1_Stealth"
+158-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:74:19-57
+159            android:exported="false"
+159-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:74:96-120
+160            android:label="Hub Bar (5x1 Stealth)" >
+160-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:74:58-95
+161            <intent-filter>
+161-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:13-183
+162                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+162-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:28-95
+162-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:36-92
+163                <action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" />
+163-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:95-167
+163-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:30:103-164
+164            </intent-filter>
+165
+166            <meta-data
+166-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:13-101
+167                android:name="android.appwidget.provider"
+167-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:24-65
+168                android:resource="@xml/info_5x1_stealth" />
+168-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:31:66-98
+169        </receiver>
+170
+171        <service
+171-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:79:9-134
+172            android:name="com.example.multiuserwidget.UserListService"
+172-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:79:18-49
+173            android:exported="false"
+173-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:79:107-131
+174            android:permission="android.permission.BIND_REMOTEVIEWS" />
+174-->D:\USER_WIDGET\app\src\main\AndroidManifest.xml:79:50-106
+175
+176        <provider
+176-->[androidx.emoji2:emoji2:1.3.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\515861bf2fc0e5ae05f727ed4da6382c\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+177            android:name="androidx.startup.InitializationProvider"
+177-->[androidx.emoji2:emoji2:1.3.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\515861bf2fc0e5ae05f727ed4da6382c\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
+178            android:authorities="com.example.multiuserwidget.androidx-startup"
+178-->[androidx.emoji2:emoji2:1.3.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\515861bf2fc0e5ae05f727ed4da6382c\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+179            android:exported="false" >
+179-->[androidx.emoji2:emoji2:1.3.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\515861bf2fc0e5ae05f727ed4da6382c\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+180            <meta-data
+180-->[androidx.emoji2:emoji2:1.3.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\515861bf2fc0e5ae05f727ed4da6382c\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+181                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+181-->[androidx.emoji2:emoji2:1.3.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\515861bf2fc0e5ae05f727ed4da6382c\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+182                android:value="androidx.startup" />
+182-->[androidx.emoji2:emoji2:1.3.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\515861bf2fc0e5ae05f727ed4da6382c\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+183            <meta-data
+183-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\jeremy\.gradle\caches\8.13\transforms\b393151216cc059d99b0b8fa36ff7a5e\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+184                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+184-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\jeremy\.gradle\caches\8.13\transforms\b393151216cc059d99b0b8fa36ff7a5e\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+185                android:value="androidx.startup" />
+185-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\jeremy\.gradle\caches\8.13\transforms\b393151216cc059d99b0b8fa36ff7a5e\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+186            <meta-data
+186-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+187                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+187-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+188                android:value="androidx.startup" />
+188-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+189        </provider>
+190
+191        <receiver
+191-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+192            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+192-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+193            android:directBootAware="false"
+193-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+194            android:enabled="true"
+194-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+195            android:exported="true"
+195-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+196            android:permission="android.permission.DUMP" >
+196-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+197            <intent-filter>
+197-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+198                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+198-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+198-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+199            </intent-filter>
+200            <intent-filter>
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+201                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+201-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+201-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+202            </intent-filter>
+203            <intent-filter>
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+204                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+204-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+204-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+205            </intent-filter>
+206            <intent-filter>
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+207                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\jeremy\.gradle\caches\8.13\transforms\d4c6ec03c687a41e1a30a3df75990216\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+208            </intent-filter>
+209        </receiver>
+210    </application>
+211
+212</manifest>

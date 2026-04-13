@@ -55,7 +55,8 @@ internal fun updateAppWidget(
                    layoutRes == R.layout.widget_quantum_expand
 
     when (layoutRes) {
-        R.layout.widget_neon_bar, R.layout.widget_quantum_bar -> {
+        R.layout.widget_neon_bar, R.layout.widget_quantum_bar,
+        R.layout.widget_bar_pill, R.layout.widget_bar_glass -> {
             val hubIdsStr = prefs.getString("hub_$appWidgetId", "") ?: ""
             val usersToShow = if (hubIdsStr.isNotEmpty()) {
                 val selectedIds = hubIdsStr.split(",").mapNotNull { it.toIntOrNull() }.toSet()
@@ -204,24 +205,21 @@ private fun updateUserItem(
     isQuantum: Boolean = false,
     scaleFactor: Float = 0.6f
 ) {
-    views.setTextViewText(slot.nameId, user.name)
     views.setImageViewBitmap(slot.iconId, getAvatarBitmap(context, user, scaleFactor))
     
+    // Remove oval circle
+    views.setInt(slot.circleId, "setBackgroundResource", 0)
+    
+    // All names visible, only active is neon green
     val isActive = user.id == currentUser
-    val ringRes = if (isQuantum) {
-        when {
-            isActive && isMainInGrid -> R.drawable.hex_bloom_blue
-            isActive -> R.drawable.hex_bloom_cyan
-            else -> R.drawable.hex_bloom_dimmed
-        }
+    views.setViewVisibility(slot.nameId, android.view.View.VISIBLE)
+    views.setTextViewText(slot.nameId, user.name)
+    
+    if (isActive) {
+        views.setTextColor(slot.nameId, android.graphics.Color.parseColor("#00FF00"))
     } else {
-        when {
-            isActive && isMainInGrid -> R.drawable.neon_ring_magenta
-            isActive -> R.drawable.neon_ring_green
-            else -> R.drawable.neon_ring_dimmed
-        }
+        views.setTextColor(slot.nameId, android.graphics.Color.parseColor("#FFFFFF"))
     }
-    views.setInt(slot.circleId, "setBackgroundResource", ringRes)
 
     val intent = Intent(context, providerClass).apply {
         action = MultiuserWidgetProvider.ACTION_SWITCH_USER

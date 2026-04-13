@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    layout.buildDirectory.set(file("../build_alt"))
     namespace = "com.example.multiuserwidget"
     compileSdk = 35
 
@@ -41,3 +42,23 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 }
+
+// Automatic APK export to Desktop
+tasks.register<Copy>("copyApkToDesktop") {
+    val apkFile = layout.buildDirectory.file("outputs/apk/debug/app-debug.apk")
+    from(apkFile)
+    into("C:/Users/jeremy/Desktop")
+    rename { "multiuser_widget_debug.apk" }
+    
+    // Only run if the APK actually exists
+    onlyIf { apkFile.get().asFile.exists() }
+}
+
+afterEvaluate {
+    tasks.matching { it.name == "assembleDebug" }.configureEach {
+        finalizedBy("copyApkToDesktop")
+    }
+}
+
+
+
