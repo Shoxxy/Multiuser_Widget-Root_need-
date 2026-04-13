@@ -1,76 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true"
-    android:padding="16dp"
-    android:paddingBottom="32dp">
+    android:layout_height="match_parent">
 
-    <!-- Header Area with Sexy Icon -->
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/app_logo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_margin="16dp"
+    <!-- Background Image with 80% Transparency (Alpha 0.2) -->
+    <ImageView
+        android:id="@+id/app_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/app_icon"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.Rounded" />
-
-    <TextView
-        android:id="@+id/status_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Multi-User Widget Manager"
-        android:textStyle="bold"
-        android:textSize="20sp" />
+        android:src="@drawable/s"
+        android:alpha="0.2" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:padding="16dp"
+        android:paddingBottom="32dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/load_users_button"
+        <!-- Header Area with Sexy Icon -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/app_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Rounded" />
+
+        <TextView
+            android:id="@+id/status_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="Benutzer laden" />
+            android:layout_marginBottom="16dp"
+            android:text="Multi-User Widget Manager"
+            android:textStyle="bold"
+            android:textSize="20sp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/load_users_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Benutzer laden" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deploy_button"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Systemweit Installieren" />
+        </LinearLayout>
+
+        <!-- User Management List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_manage_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp" />
+
+        <!-- Action Buttons -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/deploy_button"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/test_button"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Systemweit Installieren" />
+            android:text="Root Check" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/exit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF5252"
+            android:text="App Beenden" />
+
     </LinearLayout>
 
-    <!-- User Management List -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/user_manage_list"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="16dp" />
-
-    <!-- Action Buttons -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/test_button"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+    <!-- Easter Egg Text -->
+    <TextView
+        android:id="@+id/easter_egg_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Root Check" />
+        android:layout_gravity="center"
+        android:text="SusBoy"
+        android:textColor="#FF00FF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/exit_button"
+    <!-- Easter Egg Fullscreen Overly -->
+    <ImageView
+        android:id="@+id/fullscreen_overlay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FF5252"
-        android:text="App Beenden" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/s"
+        android:visibility="gone"
+        android:elevation="10dp" />
 
-</LinearLayout>
+</FrameLayout>

@@ -36,6 +36,10 @@
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\drawable\\bg_iron_stealth.xml"
     },
     {
+        "merged": "com.example.multiuserwidget.app-debug-33:/layout_item_user_list_manage.xml.flat",
+        "source": "com.example.multiuserwidget.app-main-28:/layout/item_user_list_manage.xml"
+    },
+    {
         "merged": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-debug-33:\\layout_widget_standard.xml.flat",
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\layout\\widget_standard.xml"
     },
@@ -124,10 +128,6 @@
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\drawable\\bg_cyber_pulse.xml"
     },
     {
-        "merged": "com.example.multiuserwidget.app-debug-33:/layout_widget_bar_pill.xml.flat",
-        "source": "com.example.multiuserwidget.app-main-28:/layout/widget_bar_pill.xml"
-    },
-    {
         "merged": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-debug-33:\\drawable_bg_liquid_gold.xml.flat",
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\drawable\\bg_liquid_gold.xml"
     },
@@ -172,10 +172,6 @@
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\drawable\\bg_glass_dark.xml"
     },
     {
-        "merged": "com.example.multiuserwidget.app-debug-33:/layout_widget_neon_bar.xml.flat",
-        "source": "com.example.multiuserwidget.app-main-28:/layout/widget_neon_bar.xml"
-    },
-    {
         "merged": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-debug-33:\\xml_info_4x2.xml.flat",
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\xml\\info_4x2.xml"
     },
@@ -212,10 +208,6 @@
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\layout\\activity_config.xml"
     },
     {
-        "merged": "com.example.multiuserwidget.app-debug-33:/layout_widget_bar_glass.xml.flat",
-        "source": "com.example.multiuserwidget.app-main-28:/layout/widget_bar_glass.xml"
-    },
-    {
         "merged": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-debug-33:\\drawable_ic_user_premium.xml.flat",
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\drawable\\ic_user_premium.xml"
     },
@@ -236,6 +228,10 @@
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\drawable\\bg_lavender_mist.xml"
     },
     {
+        "merged": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-debug-33:\\drawable_s.jpg.flat",
+        "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\drawable\\s.jpg"
+    },
+    {
         "merged": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-debug-33:\\layout_widget_quantum_grid.xml.flat",
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\layout\\widget_quantum_grid.xml"
     },
@@ -250,6 +246,10 @@
     {
         "merged": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-debug-33:\\drawable_hex_bloom_cyan.xml.flat",
         "source": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-main-28:\\drawable\\hex_bloom_cyan.xml"
+    },
+    {
+        "merged": "com.example.multiuserwidget.app-debug-33:/drawable_bg_item_panel.xml.flat",
+        "source": "com.example.multiuserwidget.app-main-28:/drawable/bg_item_panel.xml"
     },
     {
         "merged": "C:\\Users\\jeremy\\.gradle\\daemon\\8.13\\com.example.multiuserwidget.app-debug-33:\\xml_info_mist_glass.xml.flat",

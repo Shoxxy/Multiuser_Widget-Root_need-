@@ -21,6 +21,7 @@ drawable bg_glass_light
 drawable bg_glass_sexy
 drawable bg_hologram_tech
 drawable bg_iron_stealth
+drawable bg_item_panel
 drawable bg_lavender_mist
 drawable bg_liquid_gold
 drawable bg_liquid_magma
@@ -44,12 +45,16 @@ drawable neon_ring_dimmed
 drawable neon_ring_green
 drawable neon_ring_magenta
 drawable ring_active_border
+drawable s
 drawable widget_bg
 id active_count_text
+id app_background
 id app_logo
 id deploy_button
+id easter_egg_text
 id exit_button
 id footer_text
+id fullscreen_overlay
 id load_users_button
 id save_button
 id select_all_button

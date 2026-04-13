@@ -3006,6 +3006,7 @@ drawable bg_glass_light
 drawable bg_glass_sexy
 drawable bg_hologram_tech
 drawable bg_iron_stealth
+drawable bg_item_panel
 drawable bg_lavender_mist
 drawable bg_liquid_gold
 drawable bg_liquid_magma
@@ -3133,6 +3134,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable ring_active_border
+drawable s
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3218,6 +3220,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id app_background
 id app_logo
 id arc
 id asConfigured
@@ -3310,6 +3313,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id easter_egg_text
 id edge
 id edit_query
 id edit_text_id
@@ -3342,6 +3346,7 @@ id forever
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id fullscreen_overlay
 id ghost_view
 id ghost_view_holder
 id gone
