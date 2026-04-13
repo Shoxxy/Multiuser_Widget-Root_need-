@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Multiuser Widget</string>
+    <string name="test_button_text">Test Root &amp; List Users</string>
+</resources>

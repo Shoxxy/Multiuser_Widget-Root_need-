@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+    <LinearLayout
+        android:id="@+id/user_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/widget_bg"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <FrameLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="12dp">
+            
+            <View
+                android:id="@+id/user_circle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/neon_ring_dimmed" />
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_user_premium"
+                android:scaleType="fitCenter" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="Select User"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+</FrameLayout>
