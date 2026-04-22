@@ -11,7 +11,7 @@
         android:layout_width="54dp"
         android:layout_height="54dp">
 
-        <View
+        <FrameLayout
             android:id="@+id/user_circle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

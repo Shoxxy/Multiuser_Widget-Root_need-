@@ -14,62 +14,62 @@
     <!-- User 1 -->
     <LinearLayout android:id="@+id/user_1_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
         <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
-            <View android:id="@+id/user_1_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
+            <FrameLayout android:id="@+id/user_1_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
             <ImageView android:id="@+id/user_1_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
         </FrameLayout>
         <TextView android:id="@+id/user_1_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" android:fontFamily="sans-serif-condensed" android:maxLines="1" android:ellipsize="end" />
     </LinearLayout>
 
-    <View android:layout_width="8dp" android:layout_height="match_parent" />
+    <FrameLayout android:layout_width="8dp" android:layout_height="match_parent" />
 
     <!-- User 2 -->
     <LinearLayout android:id="@+id/user_2_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
         <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
-            <View android:id="@+id/user_2_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
+            <FrameLayout android:id="@+id/user_2_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
             <ImageView android:id="@+id/user_2_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
         </FrameLayout>
         <TextView android:id="@+id/user_2_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" android:fontFamily="sans-serif-condensed" android:maxLines="1" android:ellipsize="end" />
     </LinearLayout>
 
-    <View android:layout_width="8dp" android:layout_height="match_parent" />
+    <FrameLayout android:layout_width="8dp" android:layout_height="match_parent" />
 
     <!-- User 3 -->
     <LinearLayout android:id="@+id/user_3_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
         <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
-            <View android:id="@+id/user_3_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
+            <FrameLayout android:id="@+id/user_3_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
             <ImageView android:id="@+id/user_3_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
         </FrameLayout>
         <TextView android:id="@+id/user_3_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" android:fontFamily="sans-serif-condensed" android:maxLines="1" android:ellipsize="end" />
     </LinearLayout>
 
-    <View android:layout_width="8dp" android:layout_height="match_parent" />
+    <FrameLayout android:layout_width="8dp" android:layout_height="match_parent" />
 
     <!-- User 4 -->
     <LinearLayout android:id="@+id/user_4_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
         <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
-            <View android:id="@+id/user_4_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
+            <FrameLayout android:id="@+id/user_4_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
             <ImageView android:id="@+id/user_4_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
         </FrameLayout>
         <TextView android:id="@+id/user_4_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" android:fontFamily="sans-serif-condensed" android:maxLines="1" android:ellipsize="end" />
     </LinearLayout>
 
-    <View android:layout_width="8dp" android:layout_height="match_parent" />
+    <FrameLayout android:layout_width="8dp" android:layout_height="match_parent" />
 
     <!-- User 5 -->
     <LinearLayout android:id="@+id/user_5_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
         <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
-            <View android:id="@+id/user_5_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
+            <FrameLayout android:id="@+id/user_5_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
             <ImageView android:id="@+id/user_5_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
         </FrameLayout>
         <TextView android:id="@+id/user_5_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" android:fontFamily="sans-serif-condensed" android:maxLines="1" android:ellipsize="end" />
     </LinearLayout>
 
-    <View android:layout_width="8dp" android:layout_height="match_parent" />
+    <FrameLayout android:layout_width="8dp" android:layout_height="match_parent" />
 
     <!-- User 6 -->
     <LinearLayout android:id="@+id/user_6_root" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
         <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
-            <View android:id="@+id/user_6_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
+            <FrameLayout android:id="@+id/user_6_circle" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp" android:background="@drawable/neon_ring_dimmed" />
             <ImageView android:id="@+id/user_6_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:src="@drawable/ic_user_premium" android:scaleType="fitCenter" />
         </FrameLayout>
         <TextView android:id="@+id/user_6_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" android:fontFamily="sans-serif-condensed" android:maxLines="1" android:ellipsize="end" />

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:1-82:12
-INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:1-82:12
-INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:1-82:12
-INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:1-82:12
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:1-149:12
+INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:1-149:12
+INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:1-149:12
+INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:1-149:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\d1883d237d0e44ec730bba0a616c9515\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jeremy\.gradle\caches\8.13\transforms\655c7a557e5085bb4fc263ff66894f21\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\887cea922df6da03033ee2a792fedbb5\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -54,8 +54,8 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\jeremy\.gradle\caches\8.13\tra
 	xmlns:android
 		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:4:5-81:19
-INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:4:5-81:19
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:4:5-148:19
+INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:4:5-148:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\d1883d237d0e44ec730bba0a616c9515\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\jeremy\.gradle\caches\8.13\transforms\d1883d237d0e44ec730bba0a616c9515\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jeremy\.gradle\caches\8.13\transforms\655c7a557e5085bb4fc263ff66894f21\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -202,14 +202,118 @@ ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:74:9-77:20
 		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:74:96-120
 	android:name
 		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:74:19-57
-service#com.example.multiuserwidget.UserListService
-ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:79:9-134
+receiver#com.example.multiuserwidget.ProviderObsidian1x1
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:81:9-84:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:81:55-85
 	android:exported
-		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:79:107-131
-	android:permission
-		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:79:50-106
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:81:86-110
 	android:name
-		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:79:18-49
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:81:19-54
+receiver#com.example.multiuserwidget.ProviderCharcoalWide
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:86:9-89:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:86:56-91
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:86:92-116
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:86:19-55
+receiver#com.example.multiuserwidget.ProviderFrostWide
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:91:9-94:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:91:53-85
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:91:86-110
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:91:19-52
+receiver#com.example.multiuserwidget.ProviderMidnightWide
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:96:9-99:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:96:56-91
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:96:92-116
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:96:19-55
+receiver#com.example.multiuserwidget.ProviderNeonBar
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:101:9-104:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:101:51-81
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:101:82-106
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:101:19-50
+receiver#com.example.multiuserwidget.ProviderNeonGrid
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:106:9-109:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:106:52-83
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:106:84-108
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:106:19-51
+receiver#com.example.multiuserwidget.ProviderNordicBlue
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:111:9-114:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:111:54-87
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:111:88-112
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:111:19-53
+receiver#com.example.multiuserwidget.ProviderNordicLarge
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:116:9-119:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:116:55-89
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:116:90-114
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:116:19-54
+receiver#com.example.multiuserwidget.ProviderSageGreen
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:121:9-124:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:121:53-85
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:121:86-110
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:121:19-52
+receiver#com.example.multiuserwidget.ProviderSageLarge
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:126:9-129:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:126:53-85
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:126:86-110
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:126:19-52
+receiver#com.example.multiuserwidget.ProviderMultiuserRibbon
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:131:9-134:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:131:59-92
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:131:93-117
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:131:19-58
+receiver#com.example.multiuserwidget.ProviderSmartExpand
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:136:9-139:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:136:55-89
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:136:90-114
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:136:19-54
+receiver#com.example.multiuserwidget.ProviderExtremeHub
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:141:9-144:20
+	android:label
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:141:54-87
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:141:88-112
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:141:19-53
+service#com.example.multiuserwidget.UserListService
+ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:146:9-134
+	android:exported
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:146:107-131
+	android:permission
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:146:50-106
+	android:name
+		ADDED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml:146:18-49
 uses-sdk
 INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\USER_WIDGET\app\src\main\AndroidManifest.xml

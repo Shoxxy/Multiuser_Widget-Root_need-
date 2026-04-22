@@ -8,12 +8,13 @@ import android.content.Intent
 import android.util.Log
 import android.widget.RemoteViews
 
+private const val TAG = "MultiuserWidget"
+
 open class MultiuserWidgetProvider : AppWidgetProvider() {
 
     companion object {
         const val ACTION_SWITCH_USER = "com.example.multiuserwidget.ACTION_SWITCH_USER"
         const val EXTRA_USER_ID = "extra_user_id"
-        private const val TAG = "MultiuserWidget"
     }
 
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
@@ -42,116 +43,158 @@ internal fun updateAppWidget(
     appWidgetId: Int, 
     provider: MultiuserWidgetProvider
 ) {
-    val prefs = context.getSharedPreferences("WidgetPrefs", Context.MODE_PRIVATE)
-    val baseProvider = provider as? BaseMultiuserWidgetProvider
-    val layoutRes = baseProvider?.layoutResId ?: R.layout.widget_neon_bar
-    val views = RemoteViews(context.packageName, layoutRes)
+    // Run on background thread to prevent blocking main thread / launcher timeouts
+    Thread {
+        try {
+            val prefs = context.getSharedPreferences("WidgetPrefs", Context.MODE_PRIVATE)
+            val baseProvider = provider as? BaseMultiuserWidgetProvider
+            val layoutRes = baseProvider?.layoutResId ?: R.layout.widget_neon_bar
+            val views = RemoteViews(context.packageName, layoutRes)
 
-    val currentUser = ShellUtils.getCurrentUser()
-    val allUsers = ShellUtils.listUsers()
-
-    val isQuantum = layoutRes == R.layout.widget_quantum_bar || 
-                   layoutRes == R.layout.widget_quantum_grid || 
-                   layoutRes == R.layout.widget_quantum_expand
-
-    when (layoutRes) {
-        R.layout.widget_neon_bar, R.layout.widget_quantum_bar,
-        R.layout.widget_bar_pill, R.layout.widget_bar_glass -> {
-            val hubIdsStr = prefs.getString("hub_$appWidgetId", "") ?: ""
-            val usersToShow = if (hubIdsStr.isNotEmpty()) {
-                val selectedIds = hubIdsStr.split(",").mapNotNull { it.toIntOrNull() }.toSet()
-                allUsers.filter { it.id in selectedIds }.take(6)
-            } else {
-                allUsers.take(6)
-            }
+            Log.d(TAG, "Updating widget $appWidgetId with layout ${layoutRes.toString()}")
             
-            // Flexible scaling factor based on user count
-            val scaleFactor = when(usersToShow.size) {
-                1 -> 0.95f
-                2 -> 0.85f
-                3 -> 0.75f
-                4 -> 0.65f
-                else -> 0.55f
+            val currentUser = ShellUtils.getCurrentUser()
+            val allUsers = ShellUtils.listUsers()
+            
+            Log.d(TAG, "Fetched ${allUsers.size} users. Current user: $currentUser")
+
+            if (allUsers.isEmpty()) {
+                Log.w(TAG, "No users found or shell command failed. Widget might be empty.")
+                // Still try to update with whatever we have (maybe background?)
             }
 
-            val slots = listOf(
-                WidgetSlot(R.id.user_1_root, R.id.user_1_circle, R.id.user_1_icon, R.id.user_1_name),
-                WidgetSlot(R.id.user_2_root, R.id.user_2_circle, R.id.user_2_icon, R.id.user_2_name),
-                WidgetSlot(R.id.user_3_root, R.id.user_3_circle, R.id.user_3_icon, R.id.user_3_name),
-                WidgetSlot(R.id.user_4_root, R.id.user_4_circle, R.id.user_4_icon, R.id.user_4_name),
-                WidgetSlot(R.id.user_5_root, R.id.user_5_circle, R.id.user_5_icon, R.id.user_5_name),
-                WidgetSlot(R.id.user_6_root, R.id.user_6_circle, R.id.user_6_icon, R.id.user_6_name)
-            )
-            slots.forEachIndexed { i, slot ->
-                if (i < usersToShow.size) {
-                    val user = usersToShow[i]
-                    views.setViewVisibility(slot.rootId, android.view.View.VISIBLE)
-                    updateUserItem(context, views, slot, user, currentUser, appWidgetId, provider::class.java, isQuantum = isQuantum, scaleFactor = scaleFactor)
-                } else {
-                    views.setViewVisibility(slot.rootId, android.view.View.GONE)
+            val isQuantum = layoutRes == R.layout.widget_quantum_bar || 
+                           layoutRes == R.layout.widget_quantum_grid || 
+                           layoutRes == R.layout.widget_quantum_expand
+
+            when (layoutRes) {
+                R.layout.widget_neon_bar, R.layout.widget_quantum_bar,
+                R.layout.widget_bar_pill, R.layout.widget_bar_glass -> {
+                    // (logic remains same but with better logging)
+                    val hubIdsStr = prefs.getString("hub_$appWidgetId", "") ?: ""
+                    val usersToShow = if (hubIdsStr.isNotEmpty()) {
+                        val selectedIds = hubIdsStr.split(",").mapNotNull { it.toIntOrNull() }.toSet()
+                        allUsers.filter { it.id in selectedIds }.take(6)
+                    } else {
+                        allUsers.take(6)
+                    }
+                    
+                    Log.d(TAG, "Showing ${usersToShow.size} users in bar/pill layout")
+                    
+                    val scaleFactor = when(usersToShow.size) {
+                        1 -> 0.95f
+                        2 -> 0.85f
+                        3 -> 0.75f
+                        4 -> 0.65f
+                        else -> 0.55f
+                    }
+
+                    val slots = listOf(
+                        WidgetSlot(R.id.user_1_root, R.id.user_1_circle, R.id.user_1_icon, R.id.user_1_name),
+                        WidgetSlot(R.id.user_2_root, R.id.user_2_circle, R.id.user_2_icon, R.id.user_2_name),
+                        WidgetSlot(R.id.user_3_root, R.id.user_3_circle, R.id.user_3_icon, R.id.user_3_name),
+                        WidgetSlot(R.id.user_4_root, R.id.user_4_circle, R.id.user_4_icon, R.id.user_4_name),
+                        WidgetSlot(R.id.user_5_root, R.id.user_5_circle, R.id.user_5_icon, R.id.user_5_name),
+                        WidgetSlot(R.id.user_6_root, R.id.user_6_circle, R.id.user_6_icon, R.id.user_6_name)
+                    )
+                    slots.forEachIndexed { i, slot ->
+                        if (i < usersToShow.size) {
+                            val user = usersToShow[i]
+                            views.setViewVisibility(slot.rootId, android.view.View.VISIBLE)
+                            updateUserItem(context, views, slot, user, currentUser, appWidgetId, provider::class.java, isQuantum = isQuantum, scaleFactor = scaleFactor)
+                        } else {
+                            views.setViewVisibility(slot.rootId, android.view.View.GONE)
+                        }
+                    }
                 }
-            }
-        }
-        R.layout.widget_neon_grid, R.layout.widget_quantum_grid -> {
-            val hubIdsStr = prefs.getString("hub_$appWidgetId", "") ?: ""
-            val effectiveUsers = if (hubIdsStr.isNotEmpty()) {
-                val selectedIds = hubIdsStr.split(",").mapNotNull { it.toIntOrNull() }.toSet()
-                allUsers.filter { it.id in selectedIds }
-            } else {
-                allUsers
-            }
-            
-            val activeUser = effectiveUsers.find { it.id == currentUser } ?: effectiveUsers.firstOrNull()
-            val others = effectiveUsers.filter { it.id != activeUser?.id }.take(8)
-            val totalCount = others.size + (if (activeUser != null) 1 else 0)
+                R.layout.widget_neon_grid, R.layout.widget_quantum_grid -> {
+                    val hubIdsStr = prefs.getString("hub_$appWidgetId", "") ?: ""
+                    val effectiveUsers = if (hubIdsStr.isNotEmpty()) {
+                        val selectedIds = hubIdsStr.split(",").mapNotNull { it.toIntOrNull() }.toSet()
+                        allUsers.filter { it.id in selectedIds }
+                    } else {
+                        allUsers
+                    }
+                    
+                    val activeUser = effectiveUsers.find { it.id == currentUser } ?: effectiveUsers.firstOrNull()
+                    val others = effectiveUsers.filter { it.id != activeUser?.id }.take(8)
+                    val totalCount = others.size + (if (activeUser != null) 1 else 0)
 
-            val scaleFactor = when {
-                totalCount <= 2 -> 0.95f
-                totalCount <= 4 -> 0.75f
-                else -> 0.55f
-            }
+                    Log.d(TAG, "Showing $totalCount users in grid layout")
 
-            activeUser?.let { 
-                val mainSlot = WidgetSlot(R.id.user_active_root, R.id.user_active_circle, R.id.user_active_icon, R.id.user_active_name)
-                updateUserItem(context, views, mainSlot, it, currentUser, appWidgetId, provider::class.java, true, isQuantum, scaleFactor = scaleFactor)
-            }
-            
-            val otherSlots = listOf(
-                WidgetSlot(R.id.user_2_root, R.id.user_2_circle, R.id.user_2_icon, R.id.user_2_name),
-                WidgetSlot(R.id.user_3_root, R.id.user_3_circle, R.id.user_3_icon, R.id.user_3_name),
-                WidgetSlot(R.id.user_4_root, R.id.user_4_circle, R.id.user_4_icon, R.id.user_4_name),
-                WidgetSlot(R.id.user_5_root, R.id.user_5_circle, R.id.user_5_icon, R.id.user_5_name),
-                WidgetSlot(R.id.user_6_root, R.id.user_6_circle, R.id.user_6_icon, R.id.user_6_name),
-                WidgetSlot(R.id.user_7_root, R.id.user_7_circle, R.id.user_7_icon, R.id.user_7_name),
-                WidgetSlot(R.id.user_8_root, R.id.user_8_circle, R.id.user_8_icon, R.id.user_8_name),
-                WidgetSlot(R.id.user_9_root, R.id.user_9_circle, R.id.user_9_icon, R.id.user_9_name)
-            )
-            otherSlots.forEachIndexed { i, slot ->
-                if (i < others.size) {
-                    views.setViewVisibility(slot.rootId, android.view.View.VISIBLE)
-                    updateUserItem(context, views, slot, others[i], currentUser, appWidgetId, provider::class.java, isQuantum = isQuantum, scaleFactor = scaleFactor)
-                } else {
-                    views.setViewVisibility(slot.rootId, android.view.View.GONE)
+                    val scaleFactor = when {
+                        totalCount <= 2 -> 0.95f
+                        totalCount <= 4 -> 0.75f
+                        else -> 0.55f
+                    }
+
+                    activeUser?.let { 
+                        val mainSlot = WidgetSlot(R.id.user_active_root, R.id.user_active_circle, R.id.user_active_icon, R.id.user_active_name)
+                        updateUserItem(context, views, mainSlot, it, currentUser, appWidgetId, provider::class.java, true, isQuantum, scaleFactor = scaleFactor)
+                    }
+                    
+                    val otherSlots = listOf(
+                        WidgetSlot(R.id.user_2_root, R.id.user_2_circle, R.id.user_2_icon, R.id.user_2_name),
+                        WidgetSlot(R.id.user_3_root, R.id.user_3_circle, R.id.user_3_icon, R.id.user_3_name),
+                        WidgetSlot(R.id.user_4_root, R.id.user_4_circle, R.id.user_4_icon, R.id.user_4_name),
+                        WidgetSlot(R.id.user_5_root, R.id.user_5_circle, R.id.user_5_icon, R.id.user_5_name),
+                        WidgetSlot(R.id.user_6_root, R.id.user_6_circle, R.id.user_6_icon, R.id.user_6_name),
+                        WidgetSlot(R.id.user_7_root, R.id.user_7_circle, R.id.user_7_icon, R.id.user_7_name),
+                        WidgetSlot(R.id.user_8_root, R.id.user_8_circle, R.id.user_8_icon, R.id.user_8_name),
+                        WidgetSlot(R.id.user_9_root, R.id.user_9_circle, R.id.user_9_icon, R.id.user_9_name)
+                    )
+                    otherSlots.forEachIndexed { i, slot ->
+                        if (i < others.size) {
+                            views.setViewVisibility(slot.rootId, android.view.View.VISIBLE)
+                            updateUserItem(context, views, slot, others[i], currentUser, appWidgetId, provider::class.java, isQuantum = isQuantum, scaleFactor = scaleFactor)
+                        } else {
+                            views.setViewVisibility(slot.rootId, android.view.View.GONE)
+                        }
+                    }
                 }
+                R.layout.widget_standard, R.layout.widget_wide, R.layout.widget_large -> {
+                    val user = allUsers.find { it.id == currentUser } ?: allUsers.firstOrNull()
+                    user?.let {
+                        val slot = WidgetSlot(R.id.user_root, R.id.user_circle, R.id.user_icon, R.id.user_name)
+                        updateUserItem(context, views, slot, it, currentUser, appWidgetId, provider::class.java, scaleFactor = 0.8f)
+                    }
+                }
+                R.layout.widget_hub, R.layout.widget_ribbon -> {
+                    val intent = Intent(context, UserListService::class.java).apply {
+                        putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
+                        data = android.net.Uri.parse(toUri(Intent.URI_INTENT_SCHEME))
+                    }
+                    views.setRemoteAdapter(R.id.user_grid, intent)
+                    
+                    val clickIntent = Intent(context, provider::class.java).apply {
+                        action = MultiuserWidgetProvider.ACTION_SWITCH_USER
+                    }
+                    val clickPI = PendingIntent.getBroadcast(context, appWidgetId, clickIntent, 
+                        PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE)
+                    views.setPendingIntentTemplate(R.id.user_grid, clickPI)
+                    
+                    // Trigger notifyDataSetChanged for collection widgets
+                    appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.user_grid)
+                }
+                R.layout.widget_smart_expand -> {
+                    val user = allUsers.find { it.id == currentUser } ?: allUsers.firstOrNull()
+                    user?.let {
+                        views.setImageViewBitmap(R.id.user_icon, getAvatarBitmap(context, it, 0.7f))
+                        views.setTextViewText(R.id.active_count_text, "${currentUser}/${allUsers.size} ACTIVE")
+                    }
+                }
+                else -> {}
             }
-        }
-        else -> {
-            // Simplified handling for everything else
-            val hubIdsStr = prefs.getString("hub_$appWidgetId", "") ?: ""
-            val usersToShow = if (hubIdsStr.isNotEmpty()) {
-                val selectedIds = hubIdsStr.split(",").mapNotNull { it.toIntOrNull() }.toSet()
-                allUsers.filter { it.id in selectedIds }.take(6)
-            } else {
-                allUsers.take(6)
-            }
-            // Standard slot population logic for non-conformant remaining ones
-        }
-    }
 
-    val bgRes = baseProvider?.bgResId ?: R.drawable.bg_obsidian_glass
-    views.setInt(R.id.widget_root, "setBackgroundResource", bgRes)
+            val bgRes = baseProvider?.bgResId ?: R.drawable.bg_obsidian_glass
+            views.setInt(R.id.widget_root, "setBackgroundResource", bgRes)
 
-    appWidgetManager.updateAppWidget(appWidgetId, views)
+            appWidgetManager.updateAppWidget(appWidgetId, views)
+            Log.d(TAG, "Widget $appWidgetId update completed successfully")
+        } catch (e: Exception) {
+            Log.e(TAG, "Error updating widget: ${e.message}", e)
+        }
+    }.start()
 }
 
 private fun getAvatarBitmap(context: Context, user: UserInfo, scaleFactor: Float = 0.6f): android.graphics.Bitmap {

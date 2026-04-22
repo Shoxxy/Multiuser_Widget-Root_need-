@@ -76,6 +76,73 @@
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_5x1_stealth" />
         </receiver>
 
+        <!-- NEW DESIGNS -->
+
+        <receiver android:name=".ProviderObsidian1x1" android:label="Obsidian (1x1)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_obsidian_1x1" />
+        </receiver>
+
+        <receiver android:name=".ProviderCharcoalWide" android:label="Charcoal Wide (4x1)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_charcoal_wide" />
+        </receiver>
+
+        <receiver android:name=".ProviderFrostWide" android:label="Frost Wide (4x1)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_frost_wide" />
+        </receiver>
+
+        <receiver android:name=".ProviderMidnightWide" android:label="Midnight Wide (4x1)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_midnight_wide" />
+        </receiver>
+
+        <receiver android:name=".ProviderNeonBar" android:label="Neon Bar (4x1)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_neon_bar" />
+        </receiver>
+
+        <receiver android:name=".ProviderNeonGrid" android:label="Neon Grid (4x2)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_neon_grid" />
+        </receiver>
+
+        <receiver android:name=".ProviderNordicBlue" android:label="Nordic Blue (4x1)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_nordic_blue" />
+        </receiver>
+
+        <receiver android:name=".ProviderNordicLarge" android:label="Nordic Large (4x2)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_nordic_large" />
+        </receiver>
+
+        <receiver android:name=".ProviderSageGreen" android:label="Sage Green (4x1)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_sage_green" />
+        </receiver>
+
+        <receiver android:name=".ProviderSageLarge" android:label="Sage Large (4x2)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_sage_large" />
+        </receiver>
+
+        <receiver android:name=".ProviderMultiuserRibbon" android:label="User Ribbon (4x1)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_multiuser_ribbon" />
+        </receiver>
+
+        <receiver android:name=".ProviderSmartExpand" android:label="Smart Expand (4x2)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_smart_expand" />
+        </receiver>
+
+        <receiver android:name=".ProviderExtremeHub" android:label="Extreme Hub (5x2)" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="com.example.multiuserwidget.ACTION_SWITCH_USER" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_extreme_hub" />
+        </receiver>
+
         <service android:name=".UserListService" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false" />
 
     </application>
